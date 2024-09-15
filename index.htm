@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soccer Academy Rating System</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Soccer Performance Rating</h1>
+
+    <!-- Rating Form -->
+    <form id="rating-form">
+      <label for="player">Select Player:</label>
+      <select id="player" name="player" required>
+        <option value="Player 1">Player 1</option>
+        <option value="Player 2">Player 2</option>
+        <option value="Player 3">Player 3</option>
+        <!-- Add more players dynamically later -->
+      </select>
+
+      <label for="firstHalf">Rate First Half:</label>
+      <input type="number" id="firstHalf" name="firstHalf" min="1" max="10" required>
+
+      <label for="secondHalf">Rate Second Half:</label>
+      <input type="number" id="secondHalf" name="secondHalf" min="1" max="10" required>
+
+      <label for="comments">Comments:</label>
+      <textarea id="comments" name="comments" rows="4" required></textarea>
+
+      <button type="submit">Submit Rating</button>
+    </form>
+
+    <!-- Leaderboard Section -->
+    <div id="leaderboard">
+      <h2>Leaderboard</h2>
+      <div id="leaderboard-list"></div>
+    </div>
+
+    <!-- Ratings Section -->
+    <div id="ratings">
+      <h2>Recent Ratings</h2>
+      <div id="rating-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
